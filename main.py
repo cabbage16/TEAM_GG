@@ -15,4 +15,6 @@ while running:
         if event.type == pg.QUIT:
             running = False
 
+    pg.display.update()
+    
 pg.quit()
