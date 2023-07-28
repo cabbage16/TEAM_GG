@@ -34,10 +34,11 @@ pg.display.set_caption("Good Game")
 clock = pg.time.Clock()
 
 #배경 설정
-background = pg.image.load("./img/background/main_background.png")#<----- 이미지 파일 첨부
+background = pg.image.load("./img/background/game_background.png") #<----- 이미지 파일 첨부
 
 #캐릭터 설정
-character = pg.image.load("./img/character/583231-1.png")#<----- 이미지 파일 첨부
+character = pg.image.load("./img/character/octocat_removebg.png") #<----- 이미지 파일 첨부
+character = pg.transform.scale(character, (100, 100))
 character_size = character.get_rect().size
 character_width = character_size[0] 
 character_height = character_size[1]
