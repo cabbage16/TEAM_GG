@@ -27,17 +27,17 @@ charcter_speed = 1
 pg.display.set_caption("Good Game")
 
 #게임 아이콘 설정
-# pg_icon = pg.image.load('#Enter the image')#<----- 이미지 파일 첨부
-# pg.display.set_icon(pg_icon)
+pg_icon = pg.image.load('./img/icon/gg')
+pg.display.set_icon(pg_icon)
 
 #fps 설정
 clock = pg.time.Clock()
 
 #배경 설정
-background = pg.image.load("./img/background/game_background.png") #<----- 이미지 파일 첨부
+background = pg.image.load("./img/background/game_background.png")
 
 #캐릭터 설정
-character = pg.image.load("./img/character/octocat_removebg.png") #<----- 이미지 파일 첨부
+character = pg.image.load("./img/character/octocat_removebg.png")
 character = pg.transform.scale(character, (100, 100))
 character_size = character.get_rect().size
 character_width = character_size[0] 
