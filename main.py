@@ -27,7 +27,7 @@ charcter_speed = 1
 pg.display.set_caption("Good Game")
 
 #게임 아이콘 설정
-pg_icon = pg.image.load('./img/icon/gg')
+pg_icon = pg.image.load('./img/icon/gg.png')
 pg.display.set_icon(pg_icon)
 
 #fps 설정
