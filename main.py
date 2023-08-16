@@ -1,52 +1,9 @@
 import pygame as pg
-import win32api, win32con
+from package.initial_setup import *
 
 pg.init()
 
-#사용자 모니터 주사율 받아오는 함수
-def get_refresh_rate() -> int:
-    dm = win32api.EnumDisplaySettings(None, win32con.ENUM_CURRENT_SETTINGS)
-    return dm.DisplayFrequency
 
-#창 사이즈 설정
-screen_width = 1280
-screen_height = 720
-screen = pg.display.set_mode((screen_width, screen_height))
-
-#사용자 모니터 주사율
-user_display_frequency = get_refresh_rate()
-
-#캐릭터 이동 좌표
-to_x = 0
-to_y = 0
-
-#캐릭터 이동 속도
-charcter_speed = 1
-
-#게임 타이틀 설정
-pg.display.set_caption("Good Game")
-
-#게임 아이콘 설정
-pg_icon = pg.image.load('./img/icon/gg.png')
-pg.display.set_icon(pg_icon)
-
-#fps 설정
-clock = pg.time.Clock()
-
-#배경 설정
-background = pg.image.load("./img/background/game_background.png")
-
-#캐릭터 설정
-character = pg.image.load("./img/character/octocat_removebg.png")
-character = pg.transform.scale(character, (100, 100))
-character_size = character.get_rect().size
-character_width = character_size[0] 
-character_height = character_size[1]
-
-
-#캐릭터 좌표 설정
-character_x_pos = (screen_width / 2) - (character_width / 2)
-character_y_pos = screen_height - character_height
 
 running = True
 
