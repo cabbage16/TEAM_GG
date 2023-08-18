@@ -3,8 +3,6 @@ from package.initial_setup import *
 
 pg.init()
 
-
-
 running = True
 
 while running:
@@ -16,13 +14,13 @@ while running:
         #키 다운 이벤트
         if event.type == pg.KEYDOWN:
             if event.key == pg.K_LEFT:
-                to_x -= 0.5
+                to_x -= charcter_speed
             elif event.key == pg.K_RIGHT:
-                to_x += 0.5
+                to_x += charcter_speed
             elif event.key == pg.K_DOWN:
-                to_y += 0.5
+                to_y += charcter_speed
             elif event.key == pg.K_UP:
-                to_y -= 0.5
+                to_y -= charcter_speed
 
         #키 업 이벤트
         if event.type == pg.KEYUP: 

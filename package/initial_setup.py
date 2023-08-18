@@ -16,7 +16,7 @@ screen = pg.display.set_mode((screen_width, screen_height))
 to_x = 0
 to_y = 0
 
-charcter_speed = 1
+charcter_speed = 0.5
 
 character = pg.image.load("./img/character/octocat_removebg.png")
 character = pg.transform.scale(character, (100, 100))
